@@ -2,14 +2,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { ModuleFederationPlugin } = require('webpack').container
 const path = require('path')
 
-module.exports = {
+module.exports = (_, argsv) => ({
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     port: 8080,
     hotOnly: true
   },
   output: {
-    publicPath: 'http://localhost:8080/'
+    publicPath: argsv.mode === 'development' ? 'http://localhost:8080/' : 'https://host-omega.vercel.app/'
   },
   module: {
     rules: [
@@ -39,4 +39,4 @@ module.exports = {
       template: './public/index.html'
     })
   ]
-}
+})
