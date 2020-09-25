@@ -3,8 +3,6 @@ const { ModuleFederationPlugin } = require('webpack').container
 const path = require('path')
 
 module.exports = {
-  entry: './src/index',
-  mode: 'development',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     port: 8080,

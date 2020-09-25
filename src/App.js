@@ -1,7 +1,15 @@
 import React from 'react'
 
+// import Button from './Button'
+import './index.css'
+
 const App = props => {
-  return <div>React webpack-5 template</div>
+  return (
+    <>
+      <h1>Host App</h1>
+      {/* <Button /> */}
+    </>
+  )
 }
 
 export default App
